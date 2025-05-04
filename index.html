@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday My Love</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: #fff;
+        }
+        h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff, 0 0 20px #ff6f91, 0 0 30px #ff6f91; }
+            to { text-shadow: 0 0 20px #fff, 0 0 40px #ff6f91, 0 0 60px #ff6f91; }
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 20px;
+            background-color: #ff6f91;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff4e7a;
+        }
+    </style>
+</head>
+<body>
+    <h1>💖 Happy Birthday! 💖</h1>
+    <p id="message">ที่รักของเค้า ขอให้วันเกิดปีนี้เป็นปีที่เต็มไปด้วยความสุข ความรัก และรอยยิ้ม เค้ารักบี๋นะ! 💕</p>
+    <button onclick="showExtra()">กดตรงนี้เรื่อยๆเลยงับบี๋ 💌</button>
+
+    <script>
+        function showExtra() {
+            const messages = [
+                "บี๋คือสิ่งที่ดีที่สุดที่เข้ามาในชีวิตเค้า 💖",
+                "เค้าสัญญาว่าจะอยู่ข้างบี๋เสมอ ไม่ว่าจะทุกข์หรือสุข 💕",
+                "ขอให้บี๋สมหวังในทุกสิ่งที่ฝัน เค้าจะเป็นกำลังใจให้ตลอดไป 🌟",
+                "รักบี๋มาก ๆ นะจ๊ะ แฮปปี้เบิร์ธเดย์ จุ๊บๆ! 🎉"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').innerText = randomMessage;
+        }
+    </script>
+</body>
+</html>
